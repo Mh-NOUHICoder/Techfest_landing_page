@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wavy-text {
+    @apply text-4xl font-bold relative;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.5));
+  }
+
+@layer base {
+  :root {
+        --radius: 0.5rem;
+    }
+}
+  
+  
