@@ -23,7 +23,7 @@ function Navbar() {
   const navItems = [
     { 
       label: 'About', 
-      items: ['Overview', 'Speakers', 'Venue'] 
+      items: ['Overview', 'Speakers'] 
     },
     { 
       label: 'Schedule',
