@@ -61,7 +61,7 @@ function SpeakerProfiles({ speaker }) {
 function SpeakersGrid() {
   return (
     <div className='px-6 py-6 min-h-[65vh] flex flex-wrap justify-center items-center mx-auto space-y-2 bg-gradient-to-br from-indigo-100 via-purple-50 to-blue-100 rounded-lg'>
-      <h1 className='text-4xl pb-10 text-indigo-900 font-semibold text-center'>🌟 Featured Speakers 🌟</h1>
+      <h1 id="speakers" className='text-4xl pb-10 text-indigo-900 font-semibold text-center'>🌟 Featured Speakers 🌟</h1>
       <div className='flex lg:flex-nowrap flex-wrap justify-center'>
         {Speakers.map((speaker, index) => (
           <div key={index} className='w-full md:w-1/2 xl:w-1/3 px-4 mb-8'>

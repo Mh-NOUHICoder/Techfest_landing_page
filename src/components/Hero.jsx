@@ -1,10 +1,10 @@
-import React , {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Calendar, Clock, MapPin, Mic, Coffee, Laptop, Users, PartyPopper, Sparkles, Code, Rocket, Globe, Menu, X, ChevronDown } from 'lucide-react';
 import Countdown from './Countdown';
 
-
 function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
+  const year = 2025; // Define the year here
 
   useEffect(() => {
     setIsVisible(true);
@@ -18,8 +18,6 @@ function HeroSection() {
         <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000" />
         <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000" />
       </div>
-     
-
 
       {/* Content */}
       <div className="relative container mx-auto px-4 pt-24 pb-16">
@@ -27,12 +25,12 @@ function HeroSection() {
           {/* Badge */}
           <div className={`inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-8 transform transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <Sparkles className="w-4 h-4 text-yellow-300 mr-2" />
-            <span className="text-yellow-200 font-medium">Join the biggest tech event of 2024</span>
+            <span className="text-yellow-200 font-medium">Join the biggest tech event of {year}</span>
           </div>
 
           {/* Main Title */}
           <h1 className={`text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-indigo-200 text-transparent bg-clip-text transform transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            TechFest 2025
+            TechFest {year}
           </h1>
 
           {/* Subtitle */}
@@ -62,21 +60,21 @@ function HeroSection() {
               <Rocket className="w-5 h-5 mr-2" />
               Register Now
             </button>
-            <button   className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white rounded-full font-semibold flex items-center transition-all hover:scale-105"
+            <button
+              className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white rounded-full font-semibold flex items-center transition-all hover:scale-105"
               onClick={() => document.getElementById('agenda').scrollIntoView({ behavior: 'smooth' })}
             >
-              <Code className="w-5 h-5 mr-2" /> 
+              <Code className="w-5 h-5 mr-2" />
               View Schedule
-            </button> 
-  
-
+            </button>
           </div>
+
+          {/* Countdown */}
           <div>
-      <Countdown/>
-      </div>
+            <Countdown />
+          </div>
         </div>
       </div>
-      
     </div>
   );
 }
